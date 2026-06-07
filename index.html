@@ -1,0 +1,140 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Lumivate - Light for Your Journey</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: var(--font-sans); color: var(--color-text-primary); background: var(--color-background-primary); }
+    .hero { background: linear-gradient(135deg, #4a2673 0%, #2d1847 100%); color: white; padding: 4rem 2rem; text-align: center; }
+    .hero h1 { font-size: 32px; font-weight: 500; line-height: 1.3; margin-bottom: 0.75rem; color: #f0e6ff; }
+    .hero .tagline { font-size: 18px; color: #d4a574; margin-bottom: 1.5rem; line-height: 1.6; }
+    .container { max-width: 640px; margin: 0 auto; padding: 2rem; }
+    .section { margin-bottom: 3rem; }
+    .section-title { font-size: 20px; font-weight: 500; margin-bottom: 1.5rem; color: #4a2673; }
+    .email-form { background: #f3eff8; border: 1px solid #e0d4f0; border-radius: 12px; padding: 1.5rem; margin-bottom: 2rem; }
+    .email-form h3 { font-size: 16px; font-weight: 500; margin-bottom: 0.75rem; color: #4a2673; }
+    .email-form p { font-size: 14px; color: var(--color-text-secondary); margin-bottom: 1rem; }
+    .email-form input { width: 100%; padding: 10px 12px; border: 1px solid var(--color-border-tertiary); border-radius: 8px; font-size: 14px; margin-bottom: 0.75rem; }
+    .email-form button { width: 100%; padding: 12px; background: #d4a574; color: white; border: none; border-radius: 8px; font-weight: 500; cursor: pointer; font-size: 14px; }
+    .email-form button:hover { background: #c49460; }
+    .product-card { background: var(--color-background-primary); border: 1px solid var(--color-border-tertiary); border-radius: 12px; padding: 1.5rem; margin-bottom: 1.5rem; }
+    .product-card.free { border-left: 4px solid #d4a574; }
+    .product-card.premium { border-left: 4px solid #4a2673; }
+    .product-tag { font-size: 11px; text-transform: uppercase; font-weight: 500; color: #4a2673; margin-bottom: 0.5rem; letter-spacing: 0.5px; }
+    .product-card.free .product-tag { color: #d4a574; }
+    .product-title { font-size: 18px; font-weight: 500; margin-bottom: 0.5rem; color: #4a2673; }
+    .product-desc { font-size: 14px; color: var(--color-text-secondary); line-height: 1.6; margin-bottom: 1rem; }
+    .product-price { font-size: 16px; font-weight: 500; color: #4a2673; margin-bottom: 0.5rem; }
+    .original-price { font-size: 13px; text-decoration: line-through; color: var(--color-text-tertiary); margin-right: 0.5rem; }
+    .sale-badge { background: #d4a574; color: white; padding: 2px 8px; border-radius: 4px; font-size: 11px; font-weight: 500; }
+    .product-cta { width: 100%; padding: 12px; background: #4a2673; color: white; border: none; border-radius: 8px; font-weight: 500; cursor: pointer; font-size: 14px; text-decoration: none; display: inline-block; text-align: center; }
+    .product-cta:hover { background: #2d1847; }
+    .brand-story { background: linear-gradient(135deg, #4a2673 0%, #2d1847 100%); color: white; padding: 2rem; border-radius: 12px; margin-top: 2rem; }
+    .lotus-icon { width: 90px; height: 90px; margin: 0 auto 1.5rem; display: block; }
+    .brand-story h3 { font-size: 18px; font-weight: 500; margin-bottom: 0.5rem; color: #d4a574; text-align: center; }
+    .brand-story p { font-size: 15px; line-height: 1.8; margin-bottom: 0; text-align: center; }
+    .footer { text-align: center; font-size: 12px; color: var(--color-text-secondary); margin-top: 2rem; padding-top: 2rem; border-top: 1px solid var(--color-border-tertiary); }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <h1>Find Your Light</h1>
+    <p class="tagline">Healing is not always pretty, but it is always worth it.</p>
+  </div>
+
+  <div class="container">
+    <div class="section">
+      <p style="font-size: 15px; line-height: 1.8; color: var(--color-text-secondary); margin-bottom: 1.5rem;">
+        Welcome to The Lumivate. Created for the moments when you need a little light. A reminder that you are not alone. A guide back to yourself when the world feels too heavy.
+      </p>
+      
+      <div class="email-form">
+        <h3>Start with a gift</h3>
+        <p>Get your free Affirmations Deck and join the community of people rewiring their mindset.</p>
+        <input type="email" placeholder="Your email" required>
+        <button onclick="handleEmailSignup()">Get my free deck</button>
+        <p style="font-size: 12px; margin-top: 0.75rem; color: var(--color-text-tertiary); text-align: center;">No spam, just light. Unsubscribe anytime.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Deepen your practice</h2>
+      
+      <div class="product-card free">
+        <div class="product-tag">Free</div>
+        <h3 class="product-title">Affirmations Deck</h3>
+        <p class="product-desc">Immediate daily affirmations to ground you, shift your mindset, and remind you of your power. Available after you join above.</p>
+        <p style="font-size: 13px; color: var(--color-text-secondary);">Included with email signup</p>
+      </div>
+
+      <div class="product-card premium">
+        <div class="product-tag">Guided practice</div>
+        <h3 class="product-title">30-Day Mindset Reset Journal</h3>
+        <p class="product-desc">A structured 30-day journey to shift limiting beliefs, process emotions, and step into your highest self. Daily prompts + reflections.</p>
+        <p class="product-price">
+          <span class="original-price">$17</span>
+          <span>$7</span>
+          <span class="sale-badge">Sale</span>
+        </p>
+        <a href="https://payhip.com/b/scDEO" class="product-cta">Get the journal →</a>
+      </div>
+
+      <div class="product-card premium">
+        <div class="product-tag">Premium toolkit</div>
+        <h3 class="product-title">Success Mindset Toolkit</h3>
+        <p class="product-desc">Master the psychology of achievement. Includes manifestation guides, belief-rewiring exercises, and a 90-day success roadmap.</p>
+        <p class="product-price">
+          <span class="original-price">$10</span>
+          <span>$4</span>
+          <span class="sale-badge">Sale</span>
+        </p>
+        <a href="https://payhip.com/b/AJf2I" class="product-cta">Get the toolkit →</a>
+      </div>
+    </div>
+
+    <div class="brand-story">
+      <svg class="lotus-icon" viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg">
+        <!-- Outer petals (darker purple) -->
+        <ellipse cx="100" cy="35" rx="22" ry="35" fill="#7a5fa1" stroke="#e8d4f0" stroke-width="2.5"/>
+        <ellipse cx="160" cy="65" rx="22" ry="35" fill="#7a5fa1" stroke="#e8d4f0" stroke-width="2.5" transform="rotate(72 160 65)"/>
+        <ellipse cx="155" cy="145" rx="22" ry="35" fill="#7a5fa1" stroke="#e8d4f0" stroke-width="2.5" transform="rotate(144 155 145)"/>
+        <ellipse cx="45" cy="145" rx="22" ry="35" fill="#7a5fa1" stroke="#e8d4f0" stroke-width="2.5" transform="rotate(216 45 145)"/>
+        <ellipse cx="40" cy="65" rx="22" ry="35" fill="#7a5fa1" stroke="#e8d4f0" stroke-width="2.5" transform="rotate(288 40 65)"/>
+        
+        <!-- Inner petals (medium purple) -->
+        <ellipse cx="100" cy="55" rx="18" ry="32" fill="#9a7fc1" stroke="#e8d4f0" stroke-width="2" opacity="0.9"/>
+        <ellipse cx="150" cy="85" rx="18" ry="32" fill="#9a7fc1" stroke="#e8d4f0" stroke-width="2" opacity="0.9" transform="rotate(72 150 85)"/>
+        <ellipse cx="145" cy="140" rx="18" ry="32" fill="#9a7fc1" stroke="#e8d4f0" stroke-width="2" opacity="0.9" transform="rotate(144 145 140)"/>
+        <ellipse cx="55" cy="140" rx="18" ry="32" fill="#9a7fc1" stroke="#e8d4f0" stroke-width="2" opacity="0.9" transform="rotate(216 55 140)"/>
+        <ellipse cx="50" cy="85" rx="18" ry="32" fill="#9a7fc1" stroke="#e8d4f0" stroke-width="2" opacity="0.9" transform="rotate(288 50 85)"/>
+        
+        <!-- Center circle (gold) -->
+        <circle cx="100" cy="100" r="28" fill="#d4a574" stroke="#e8d4f0" stroke-width="2.5"/>
+        
+        <!-- Inner center detail -->
+        <circle cx="100" cy="100" r="18" fill="#e8d4f0" opacity="0.4"/>
+      </svg>
+      <h3>Why The Lumivate?</h3>
+      <p>This is a space for every soul going through a healing journey ready to ignite, elevate, and rise — right where you are, exactly as you are.</p>
+    </div>
+
+    <div class="footer">
+      <p>© 2024 The Lumivate. Created with intention for your healing journey.</p>
+    </div>
+  </div>
+
+  <script>
+    function handleEmailSignup() {
+      const email = document.querySelector('.email-form input').value;
+      if (email) {
+        alert('Thank you! Check your email for your free Affirmations Deck. You can also grab it directly here: https://payhip.com/b/fd7Yx');
+        document.querySelector('.email-form input').value = '';
+      }
+    }
+  </script>
+</body>
+</html>
