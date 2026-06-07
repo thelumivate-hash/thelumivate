@@ -6,40 +6,15 @@
   <title>The Lumivate - Light for Your Journey</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: var(--color-text-primary); background: var(--color-background-primary); }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #2c2c2c; background: #ffffff; }
     .hero { 
-      background: linear-gradient(135deg, rgba(74, 38, 115, 0.7) 0%, rgba(45, 24, 71, 0.7) 100%), 
-                  linear-gradient(180deg, #5a8a5a 0%, #8fb88f 50%, #a8cca8 100%);
+      background: linear-gradient(135deg, rgba(74, 38, 115, 0.75) 0%, rgba(45, 24, 71, 0.75) 100%), 
+                  linear-gradient(180deg, #6b8e6b 0%, #8fb88f 50%, #a8cca8 100%);
       color: white; 
       padding: 3rem 2rem;
       text-align: center; 
       position: relative;
-      box-shadow: inset 0 2px 8px rgba(0, 0, 0, 0.2);
-    }
-    .hero::before { 
-      content: ""; 
-      position: absolute; 
-      top: 0; 
-      left: 0; 
-      right: 0; 
-      bottom: 0; 
-      background: 
-        radial-gradient(circle at 15% 30%, rgba(255,255,255,0.1) 0%, transparent 50%),
-        radial-gradient(circle at 85% 20%, rgba(255,255,255,0.08) 0%, transparent 50%);
-      z-index: 1; 
-    }
-    .hero::after {
-      content: "";
-      position: absolute;
-      top: 10%;
-      left: 5%;
-      right: 5%;
-      bottom: 0;
-      background-image: 
-        linear-gradient(90deg, transparent 0%, rgba(255,255,255,0.15) 20%, transparent 25%),
-        linear-gradient(90deg, transparent 30%, rgba(255,255,255,0.12) 40%, transparent 45%),
-        linear-gradient(90deg, transparent 60%, rgba(255,255,255,0.1) 70%, transparent 75%);
-      z-index: 1;
+      min-height: auto;
     }
     .hero-content { 
       position: relative; 
@@ -96,13 +71,13 @@
     }
     .email-form p { 
       font-size: 14px; 
-      color: var(--color-text-secondary); 
+      color: #666666; 
       margin-bottom: 1rem; 
     }
     .email-form input { 
       width: 100%; 
       padding: 10px 12px; 
-      border: 1px solid var(--color-border-tertiary); 
+      border: 1px solid #ddd; 
       border-radius: 8px; 
       font-size: 14px; 
       margin-bottom: 0.75rem; 
@@ -123,8 +98,8 @@
       background: #c49460; 
     }
     .product-card { 
-      background: var(--color-background-primary); 
-      border: 1px solid var(--color-border-tertiary); 
+      background: #ffffff; 
+      border: 1px solid #ddd; 
       border-radius: 12px; 
       padding: 1.5rem; 
       margin-bottom: 1.5rem; 
@@ -159,7 +134,7 @@
     }
     .product-desc { 
       font-size: 14px; 
-      color: var(--color-text-secondary); 
+      color: #666666; 
       line-height: 1.6; 
       margin-bottom: 1rem; 
     }
@@ -172,7 +147,7 @@
     .original-price { 
       font-size: 13px; 
       text-decoration: line-through; 
-      color: var(--color-text-tertiary); 
+      color: #999999; 
       margin-right: 0.5rem; 
     }
     .sale-badge { 
@@ -228,10 +203,10 @@
     .footer { 
       text-align: center; 
       font-size: 12px; 
-      color: var(--color-text-secondary); 
+      color: #999999; 
       margin-top: 2rem; 
       padding-top: 2rem; 
-      border-top: 1px solid var(--color-border-tertiary); 
+      border-top: 1px solid #ddd; 
     }
   </style>
 </head>
@@ -259,20 +234,20 @@
 
   <div class="container">
     <div class="section">
-      <p style="font-size: 15px; line-height: 1.8; color: var(--color-text-primary); margin-bottom: 1rem;">
+      <p style="font-size: 15px; line-height: 1.8; color: #2c2c2c; margin-bottom: 1rem;">
         <strong>Welcome to The Lumivate.</strong>
       </p>
-      <p style="font-size: 15px; line-height: 1.8; color: var(--color-text-secondary); margin-bottom: 1rem; font-style: italic;">
+      <p style="font-size: 15px; line-height: 1.8; color: #666666; margin-bottom: 1rem; font-style: italic;">
         Being human is not easy. Life gets messy, heavy, and sometimes downright hard — and that's okay. You don't have to have it all together to keep going.
       </p>
-      <p style="font-size: 15px; line-height: 1.8; color: var(--color-text-secondary); margin-bottom: 1rem; font-style: italic;">
+      <p style="font-size: 15px; line-height: 1.8; color: #666666; margin-bottom: 1rem; font-style: italic;">
         The Lumivate was created for the moments when you need a little light. A reminder that you are not alone. That healing is not always pretty, but it is always worth it.
       </p>
-      <p style="font-size: 15px; line-height: 1.8; color: var(--color-text-secondary); margin-bottom: 1rem; font-style: italic;">
+      <p style="font-size: 15px; line-height: 1.8; color: #666666; margin-bottom: 1rem; font-style: italic;">
         Here you'll find quotes, affirmations, mindset tips, and wisdom to carry with you — not just for the good days, but especially for the hard ones.
       </p>
-      <p style="font-size: 15px; line-height: 1.8; color: var(--color-text-secondary); margin-bottom: 2rem;">
-        <strong style="color: var(--color-text-primary);">This is a space for every soul going through a healing journey ready to ignite, elevate, and rise — right where you are, exactly as you are.</strong>
+      <p style="font-size: 15px; line-height: 1.8; color: #666666; margin-bottom: 2rem;">
+        <strong style="color: #2c2c2c;">This is a space for every soul going through a healing journey ready to ignite, elevate, and rise — right where you are, exactly as you are.</strong>
       </p>
       
       <div class="email-form">
@@ -280,7 +255,7 @@
         <p>Get your free Affirmations Deck and join the community of people rewiring their mindset.</p>
         <input type="email" placeholder="Your email" required>
         <button onclick="handleEmailSignup()">Get my free deck</button>
-        <p style="font-size: 12px; margin-top: 0.75rem; color: var(--color-text-tertiary); text-align: center;">No spam, just light. Unsubscribe anytime.</p>
+        <p style="font-size: 12px; margin-top: 0.75rem; color: #999999; text-align: center;">No spam, just light. Unsubscribe anytime.</p>
       </div>
     </div>
 
@@ -291,7 +266,7 @@
         <div class="product-tag">Free</div>
         <h3 class="product-title">Affirmations Deck</h3>
         <p class="product-desc">Immediate daily affirmations to ground you, shift your mindset, and remind you of your power. Available after you join above.</p>
-        <p style="font-size: 13px; color: var(--color-text-secondary);">Included with email signup</p>
+        <p style="font-size: 13px; color: #666666;">Included with email signup</p>
       </div>
 
       <div class="product-card premium">
