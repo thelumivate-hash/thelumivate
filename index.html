@@ -388,5 +388,34 @@
       console.log('Email captured:', email);
     }
   </script>
-</body>
-</html>
+<script>
+    function handleSubmit(event) {
+      event.preventDefault();
+      
+      const emailInput = document.getElementById('emailInput');
+      const messageEl = document.getElementById('message');
+      const email = emailInput.value.trim();
+      
+      if (!email) {
+        messageEl.textContent = 'Please enter your email address.';
+        messageEl.className = 'message error';
+        return;
+      }
+      
+      // Create the success message with link
+      const successDiv = document.createElement('div');
+      successDiv.innerHTML = '✓ Thank you! <a href="https://payhip.com/b/fd7Yx" target="_blank" style="color: #22863a; font-weight: bold; text-decoration: underline;">Get your free Affirmations Deck here</a>.';
+      
+      messageEl.innerHTML = '✓ Thank you! <a href="https://payhip.com/b/fd7Yx" target="_blank" style="color: #22863a; font-weight: bold; text-decoration: underline;">Get your free Affirmations Deck here</a>.';
+      messageEl.className = 'message success';
+      emailInput.value = '';
+      
+      // Store email in localStorage for your records
+      let emails = JSON.parse(localStorage.getItem('lumivateEmails') || '[]');
+      emails.push({email: email, timestamp: new Date().toISOString()});
+      localStorage.setItem('lumivateEmails', JSON.stringify(emails));
+      
+      // Log to browser console for your reference
+      console.log('Email captured:', email);
+    }
+  </script>
