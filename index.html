@@ -6,80 +6,92 @@
   <title>The Lumivate - Light for Your Journey</title>
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; color: #2c2c2c; background: #ffffff; }
+    html, body { height: 100%; }
+    body { font-family: Arial, sans-serif; }
+    
     .hero { 
-      background-color: #4a2673;
-      color: white; 
-      padding: 3rem 2rem;
-      text-align: center; 
-      position: relative;
+      background-color: #4a2673 !important;
+      width: 100%;
+      padding: 50px 20px;
+      text-align: center;
     }
-    .hero-content { 
-      position: relative; 
-      z-index: 2; 
-    }
+    
     .hero h1 { 
-      font-size: 40px; 
-      font-weight: 500; 
-      line-height: 1.2; 
-      margin-bottom: 0.5rem; 
-      color: #f0e6ff; 
-      letter-spacing: -0.5px; 
+      color: #f0e6ff;
+      font-size: 40px;
+      margin-bottom: 15px;
       text-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
-    .hero .tagline { 
-      font-size: 16px; 
-      color: #e8d4f0; 
-      margin-bottom: 1rem; 
-      line-height: 1.6; 
+    
+    .hero p { 
+      color: #e8d4f0;
+      font-size: 16px;
+      margin-bottom: 20px;
       font-style: italic;
       text-shadow: 0 1px 3px rgba(0,0,0,0.2);
     }
-    .hero-lotus { 
-      width: 60px; 
-      height: 60px; 
+    
+    .hero svg { 
+      width: 60px;
+      height: 60px;
       margin: 0 auto;
     }
+    
     .container { 
       max-width: 660px; 
       margin: 0 auto; 
-      padding: 2.5rem 2rem; 
+      padding: 40px 20px; 
     }
+    
     .section { 
-      margin-bottom: 3rem; 
+      margin-bottom: 30px; 
     }
+    
     .section-title { 
       font-size: 20px; 
-      font-weight: 500; 
-      margin-bottom: 1.5rem; 
+      font-weight: bold;
+      margin-bottom: 20px; 
       color: #4a2673; 
     }
+    
+    p { 
+      font-size: 15px;
+      line-height: 1.8;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    
     .email-form { 
       background: #f3eff8; 
       border: 1px solid #e0d4f0; 
       border-radius: 12px; 
-      padding: 1.5rem; 
-      margin-bottom: 2rem; 
+      padding: 20px; 
+      margin-bottom: 30px; 
     }
+    
     .email-form h3 { 
       font-size: 16px; 
-      font-weight: 500; 
-      margin-bottom: 0.75rem; 
+      font-weight: bold;
+      margin-bottom: 10px; 
       color: #4a2673; 
     }
+    
     .email-form p { 
       font-size: 14px; 
-      color: #666666; 
-      margin-bottom: 1rem; 
+      color: #666;
+      margin-bottom: 10px;
     }
+    
     .email-form input { 
       width: 100%; 
-      padding: 10px 12px; 
+      padding: 10px; 
       border: 1px solid #ddd; 
       border-radius: 8px; 
       font-size: 14px; 
-      margin-bottom: 0.75rem; 
+      margin-bottom: 10px; 
+      box-sizing: border-box;
     }
+    
     .email-form button { 
       width: 100%; 
       padding: 12px; 
@@ -87,75 +99,113 @@
       color: white; 
       border: none; 
       border-radius: 8px; 
-      font-weight: 500; 
+      font-weight: bold;
       cursor: pointer; 
       font-size: 14px; 
-      transition: background 0.2s; 
     }
+    
     .email-form button:hover { 
       background: #c49460; 
     }
+    
+    .email-form button:disabled {
+      background: #999;
+      cursor: not-allowed;
+    }
+    
+    .email-form .small { 
+      font-size: 12px;
+      margin-top: 10px;
+      color: #999;
+      text-align: center;
+    }
+    
+    .email-form .message {
+      font-size: 14px;
+      margin-top: 10px;
+      padding: 10px;
+      border-radius: 8px;
+      text-align: center;
+      display: none;
+    }
+    
+    .email-form .success {
+      background: #d4f4dd;
+      color: #22863a;
+      display: block;
+    }
+    
+    .email-form .error {
+      background: #feddde;
+      color: #cb2431;
+      display: block;
+    }
+    
     .product-card { 
-      background: #ffffff; 
+      background: white; 
       border: 1px solid #ddd; 
       border-radius: 12px; 
-      padding: 1.5rem; 
-      margin-bottom: 1.5rem; 
-      transition: transform 0.2s, box-shadow 0.2s; 
+      padding: 20px; 
+      margin-bottom: 20px; 
     }
-    .product-card:hover { 
-      transform: translateY(-2px); 
-      box-shadow: 0 4px 12px rgba(0,0,0,0.08); 
-    }
+    
     .product-card.free { 
       border-left: 4px solid #d4a574; 
     }
+    
     .product-card.premium { 
       border-left: 4px solid #4a2673; 
     }
+    
     .product-tag { 
       font-size: 11px; 
       text-transform: uppercase; 
-      font-weight: 500; 
+      font-weight: bold;
       color: #4a2673; 
-      margin-bottom: 0.5rem; 
+      margin-bottom: 5px; 
       letter-spacing: 0.5px; 
     }
+    
     .product-card.free .product-tag { 
       color: #d4a574; 
     }
+    
     .product-title { 
       font-size: 18px; 
-      font-weight: 500; 
-      margin-bottom: 0.5rem; 
+      font-weight: bold;
+      margin-bottom: 10px; 
       color: #4a2673; 
     }
+    
     .product-desc { 
       font-size: 14px; 
-      color: #666666; 
+      color: #666; 
       line-height: 1.6; 
-      margin-bottom: 1rem; 
+      margin-bottom: 15px; 
     }
+    
     .product-price { 
       font-size: 16px; 
-      font-weight: 500; 
+      font-weight: bold;
       color: #4a2673; 
-      margin-bottom: 0.5rem; 
+      margin-bottom: 10px; 
     }
+    
     .original-price { 
-      font-size: 13px; 
       text-decoration: line-through; 
-      color: #999999; 
-      margin-right: 0.5rem; 
+      color: #999;
+      margin-right: 5px; 
     }
+    
     .sale-badge { 
       background: #d4a574; 
       color: white; 
       padding: 2px 8px; 
       border-radius: 4px; 
       font-size: 11px; 
-      font-weight: 500; 
+      font-weight: bold;
     }
+    
     .product-cta { 
       width: 100%; 
       padding: 12px; 
@@ -163,97 +213,85 @@
       color: white; 
       border: none; 
       border-radius: 8px; 
-      font-weight: 500; 
+      font-weight: bold;
       cursor: pointer; 
       font-size: 14px; 
       text-decoration: none; 
-      display: inline-block; 
-      text-align: center; 
-      transition: background 0.2s; 
+      display: block;
+      text-align: center;
     }
+    
     .product-cta:hover { 
       background: #2d1847; 
     }
+    
     .brand-story { 
-      background: linear-gradient(135deg, #4a2673 0%, #2d1847 100%); 
+      background: #4a2673; 
       color: white; 
-      padding: 2rem; 
+      padding: 30px; 
       border-radius: 12px; 
-      margin-top: 3rem; 
+      margin-top: 40px; 
       text-align: center; 
     }
-    .lotus-icon { 
-      width: 80px; 
-      height: 80px; 
-      margin: 0 auto 1rem; 
-    }
+    
     .brand-story h3 { 
       font-size: 18px; 
-      font-weight: 500; 
-      margin-bottom: 0.75rem; 
+      font-weight: bold;
+      margin-bottom: 10px; 
       color: #d4a574; 
     }
+    
     .brand-story p { 
       font-size: 15px; 
       line-height: 1.8; 
-      margin-bottom: 0; 
+      color: white;
     }
+    
     .footer { 
       text-align: center; 
       font-size: 12px; 
-      color: #999999; 
-      margin-top: 2rem; 
-      padding-top: 2rem; 
+      color: #999; 
+      margin-top: 30px; 
+      padding-top: 20px; 
       border-top: 1px solid #ddd; 
     }
   </style>
 </head>
 <body>
   <div class="hero">
-    <div class="hero-content">
-      <h1>The Lumivate Story</h1>
-      <p class="tagline">Healing is not always pretty, but it is always worth it.</p>
-      <svg class="hero-lotus" viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg">
-        <ellipse cx="100" cy="35" rx="22" ry="35" fill="#e8d4f0" stroke="#f0e6ff" stroke-width="2.5"/>
-        <ellipse cx="160" cy="65" rx="22" ry="35" fill="#e8d4f0" stroke="#f0e6ff" stroke-width="2.5" transform="rotate(72 160 65)"/>
-        <ellipse cx="155" cy="145" rx="22" ry="35" fill="#e8d4f0" stroke="#f0e6ff" stroke-width="2.5" transform="rotate(144 155 145)"/>
-        <ellipse cx="45" cy="145" rx="22" ry="35" fill="#e8d4f0" stroke="#f0e6ff" stroke-width="2.5" transform="rotate(216 45 145)"/>
-        <ellipse cx="40" cy="65" rx="22" ry="35" fill="#e8d4f0" stroke="#f0e6ff" stroke-width="2.5" transform="rotate(288 40 65)"/>
-        <ellipse cx="100" cy="55" rx="18" ry="32" fill="#d4a574" stroke="#f0e6ff" stroke-width="2" opacity="0.95"/>
-        <ellipse cx="150" cy="85" rx="18" ry="32" fill="#d4a574" stroke="#f0e6ff" stroke-width="2" opacity="0.95" transform="rotate(72 150 85)"/>
-        <ellipse cx="145" cy="140" rx="18" ry="32" fill="#d4a574" stroke="#f0e6ff" stroke-width="2" opacity="0.95" transform="rotate(144 145 140)"/>
-        <ellipse cx="55" cy="140" rx="18" ry="32" fill="#d4a574" stroke="#f0e6ff" stroke-width="2" opacity="0.95" transform="rotate(216 55 140)"/>
-        <ellipse cx="50" cy="85" rx="18" ry="32" fill="#d4a574" stroke="#f0e6ff" stroke-width="2" opacity="0.95" transform="rotate(288 50 85)"/>
-        <circle cx="100" cy="100" r="28" fill="#f0e6ff" stroke="#f0e6ff" stroke-width="2.5"/>
-        <circle cx="100" cy="100" r="18" fill="#d4a574" opacity="0.6"/>
-      </svg>
-    </div>
+    <h1>The Lumivate Story</h1>
+    <p>Healing is not always pretty, but it is always worth it.</p>
+    <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg">
+      <ellipse cx="100" cy="35" rx="22" ry="35" fill="#e8d4f0" stroke="#f0e6ff" stroke-width="2.5"/>
+      <ellipse cx="160" cy="65" rx="22" ry="35" fill="#e8d4f0" stroke="#f0e6ff" stroke-width="2.5" transform="rotate(72 160 65)"/>
+      <ellipse cx="155" cy="145" rx="22" ry="35" fill="#e8d4f0" stroke="#f0e6ff" stroke-width="2.5" transform="rotate(144 155 145)"/>
+      <ellipse cx="45" cy="145" rx="22" ry="35" fill="#e8d4f0" stroke="#f0e6ff" stroke-width="2.5" transform="rotate(216 45 145)"/>
+      <ellipse cx="40" cy="65" rx="22" ry="35" fill="#e8d4f0" stroke="#f0e6ff" stroke-width="2.5" transform="rotate(288 40 65)"/>
+      <ellipse cx="100" cy="55" rx="18" ry="32" fill="#d4a574" stroke="#f0e6ff" stroke-width="2" opacity="0.95"/>
+      <ellipse cx="150" cy="85" rx="18" ry="32" fill="#d4a574" stroke="#f0e6ff" stroke-width="2" opacity="0.95" transform="rotate(72 150 85)"/>
+      <ellipse cx="145" cy="140" rx="18" ry="32" fill="#d4a574" stroke="#f0e6ff" stroke-width="2" opacity="0.95" transform="rotate(144 145 140)"/>
+      <ellipse cx="55" cy="140" rx="18" ry="32" fill="#d4a574" stroke="#f0e6ff" stroke-width="2" opacity="0.95" transform="rotate(216 55 140)"/>
+      <ellipse cx="50" cy="85" rx="18" ry="32" fill="#d4a574" stroke="#f0e6ff" stroke-width="2" opacity="0.95" transform="rotate(288 50 85)"/>
+      <circle cx="100" cy="100" r="28" fill="#f0e6ff" stroke="#f0e6ff" stroke-width="2.5"/>
+      <circle cx="100" cy="100" r="18" fill="#d4a574" opacity="0.6"/>
+    </svg>
   </div>
 
   <div class="container">
     <div class="section">
-      <p style="font-size: 15px; line-height: 1.8; color: #2c2c2c; margin-bottom: 1rem;">
-        <strong>Welcome to The Lumivate.</strong>
-      </p>
-      <p style="font-size: 15px; line-height: 1.8; color: #666666; margin-bottom: 1rem; font-style: italic;">
-        Being human is not easy. Life gets messy, heavy, and sometimes downright hard — and that's okay. You don't have to have it all together to keep going.
-      </p>
-      <p style="font-size: 15px; line-height: 1.8; color: #666666; margin-bottom: 1rem; font-style: italic;">
-        The Lumivate was created for the moments when you need a little light. A reminder that you are not alone. That healing is not always pretty, but it is always worth it.
-      </p>
-      <p style="font-size: 15px; line-height: 1.8; color: #666666; margin-bottom: 1rem; font-style: italic;">
-        Here you'll find quotes, affirmations, mindset tips, and wisdom to carry with you — not just for the good days, but especially for the hard ones.
-      </p>
-      <p style="font-size: 15px; line-height: 1.8; color: #666666; margin-bottom: 2rem;">
-        <strong style="color: #2c2c2c;">This is a space for every soul going through a healing journey ready to ignite, elevate, and rise — right where you are, exactly as you are.</strong>
-      </p>
+      <p><strong>Welcome to The Lumivate.</strong></p>
+      <p><em>Being human is not easy. Life gets messy, heavy, and sometimes downright hard — and that's okay. You don't have to have it all together to keep going.</em></p>
+      <p><em>The Lumivate was created for the moments when you need a little light. A reminder that you are not alone. That healing is not always pretty, but it is always worth it.</em></p>
+      <p><em>Here you'll find quotes, affirmations, mindset tips, and wisdom to carry with you — not just for the good days, but especially for the hard ones.</em></p>
+      <p><strong>This is a space for every soul going through a healing journey ready to ignite, elevate, and rise — right where you are, exactly as you are.</strong></p>
       
       <div class="email-form">
         <h3>Start with a gift</h3>
         <p>Get your free Affirmations Deck and join the community of people rewiring their mindset.</p>
-        <input type="email" placeholder="Your email" required>
-        <button onclick="handleEmailSignup()">Get my free deck</button>
-        <p style="font-size: 12px; margin-top: 0.75rem; color: #999999; text-align: center;">No spam, just light. Unsubscribe anytime.</p>
+        <input type="email" id="emailInput" placeholder="Your email" required>
+        <button id="submitBtn" onclick="handleEmailSignup()">Get my free deck</button>
+        <p class="small">No spam, just light. Unsubscribe anytime.</p>
+        <p id="message" class="message"></p>
       </div>
     </div>
 
@@ -264,7 +302,7 @@
         <div class="product-tag">Free</div>
         <h3 class="product-title">Affirmations Deck</h3>
         <p class="product-desc">Immediate daily affirmations to ground you, shift your mindset, and remind you of your power. Available after you join above.</p>
-        <p style="font-size: 13px; color: #666666;">Included with email signup</p>
+        <p style="color: #666;">Included with email signup</p>
       </div>
 
       <div class="product-card premium">
@@ -293,7 +331,7 @@
     </div>
 
     <div class="brand-story">
-      <svg class="lotus-icon" viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg">
+      <svg style="width: 80px; height: 80px; margin: 0 auto 15px;" viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg">
         <ellipse cx="100" cy="35" rx="22" ry="35" fill="#7a5fa1" stroke="#e8d4f0" stroke-width="2.5"/>
         <ellipse cx="160" cy="65" rx="22" ry="35" fill="#7a5fa1" stroke="#e8d4f0" stroke-width="2.5" transform="rotate(72 160 65)"/>
         <ellipse cx="155" cy="145" rx="22" ry="35" fill="#7a5fa1" stroke="#e8d4f0" stroke-width="2.5" transform="rotate(144 155 145)"/>
@@ -317,11 +355,60 @@
   </div>
 
   <script>
-    function handleEmailSignup() {
-      const email = document.querySelector('.email-form input').value;
-      if (email) {
-        alert('Thank you! Check your email for your free Affirmations Deck. You can also grab it directly here: https://payhip.com/b/fd7Yx');
-        document.querySelector('.email-form input').value = '';
+    const API_KEY = 'eo_680d99e81bee85f5030d228397d9fe02ae59f8e42f2e5b03f81856feff8989e3';
+    const LIST_ID = '558d2ae6-5e3d-11f1-bb9c-01a0ca6036a9';
+
+    async function handleEmailSignup() {
+      const emailInput = document.getElementById('emailInput');
+      const submitBtn = document.getElementById('submitBtn');
+      const messageEl = document.getElementById('message');
+      const email = emailInput.value.trim();
+
+      // Validate email
+      if (!email || !email.includes('@')) {
+        messageEl.textContent = 'Please enter a valid email address';
+        messageEl.className = 'message error';
+        return;
+      }
+
+      // Disable button and show loading state
+      submitBtn.disabled = true;
+      submitBtn.textContent = 'Adding you...';
+
+      try {
+        // Call Email Octopus API
+        const response = await fetch('https://emailoctopus.com/api/1.6/lists/' + LIST_ID + '/contacts', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            api_key: API_KEY,
+            email_address: email,
+            fields: {},
+            status: 'subscribed'
+          })
+        });
+
+        const data = await response.json();
+
+        if (response.ok || data.code === 'MEMBER_EXISTS_WITH_SAME_EMAIL') {
+          messageEl.textContent = '✓ Thank you! Check your email for your free Affirmations Deck.';
+          messageEl.className = 'message success';
+          emailInput.value = '';
+          submitBtn.textContent = 'Get my free deck';
+          submitBtn.disabled = false;
+        } else {
+          messageEl.textContent = 'Something went wrong. Please try again.';
+          messageEl.className = 'message error';
+          submitBtn.textContent = 'Get my free deck';
+          submitBtn.disabled = false;
+        }
+      } catch (error) {
+        messageEl.textContent = 'Error: ' + error.message;
+        messageEl.className = 'message error';
+        submitBtn.textContent = 'Get my free deck';
+        submitBtn.disabled = false;
       }
     }
   </script>
