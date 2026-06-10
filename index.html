@@ -135,6 +135,12 @@
       display: block;
     }
     
+    .email-form .success a {
+      color: #22863a;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+    
     .email-form .error {
       background: #feddde;
       color: #cb2431;
@@ -368,12 +374,12 @@
         return;
       }
       
-      // Show success message
-      messageEl.textContent = '✓ Thank you! Check your email for your free Affirmations Deck.';
+      // Show success message with Payhip link
+      messageEl.innerHTML = '✓ Thank you! <a href="https://payhip.com/b/fd7Yx" target="_blank">Get your free Affirmations Deck here</a>.';
       messageEl.className = 'message success';
       emailInput.value = '';
       
-      // Store email in localStorage for now
+      // Store email in localStorage for your records
       let emails = JSON.parse(localStorage.getItem('lumivateEmails') || '[]');
       emails.push({email: email, timestamp: new Date().toISOString()});
       localStorage.setItem('lumivateEmails', JSON.stringify(emails));
